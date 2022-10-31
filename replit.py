@@ -3,6 +3,7 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
 from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QIcon
 from pypresence import Presence
+from time import time
 
 clientId = "1028218378357329990"
 try:
@@ -14,7 +15,8 @@ except:
 
 RPC.update(
     large_image="logo",
-    large_text="Replit Desktop"
+    large_text="Replit Desktop",
+    start=time(),
 )
 
 class WebEnginePage(QWebEnginePage):
